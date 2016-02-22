@@ -1,0 +1,5 @@
+Header set Access-Control-Allow-Methods "GET, POST"
+RewriteEngine On 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteRule ^(.*)$ %{ENV:BASE}index.php [QSA,L]
